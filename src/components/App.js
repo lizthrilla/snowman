@@ -31,8 +31,10 @@ class App extends Component {
   }
 
   get points () {
-    // TODO
-    return 0
+    return this.state.word.split('').filter((letter) => {
+      return this.state.guesses.includes(letter)
+    }).length
+    // return 0
   }
 
   render () {
